@@ -1,0 +1,15 @@
+<h1> {{title}}</h1>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-5">
+			<picker id="testingPicker" placeholder="Please select" [datasource]="users" [(value)]="selectedUser">
+				<template>
+					<div style="width:500px;">
+						<h5>{{model.name}}</h5>
+						<h1>{{model.address?.street}}</h1>
+					</div>
+				</template>
+			</picker>
+		</div>
+	</div>
+</div>

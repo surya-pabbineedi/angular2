@@ -1,0 +1,63 @@
+{
+    "department": {
+        "fields": [
+            {
+                "label": "Id",
+                "name": "DepartmentId",
+                "type": "number"
+            },
+            {
+                "label": "Department Code",
+                "name": "DepartmentCode",
+                "type": "string",
+                "control": "text"
+            },
+            {
+                "label": "Description",
+                "name": "Description",
+                "type": "string",
+                "control": "textarea"
+            },
+            {
+                "label": "Active",
+                "name": "IsActive",
+                "type": "boolean",
+                "control": "checkbox"
+            }
+        ],
+        "resources": {
+            "list": "/UserDepartment/GetUserDepartmentDetails",
+            "create": "/UserDepartment/CreateDepartment/",
+            "update": "/UserDepartment/UpdateUserDepartmentDetails/",
+            "delete": ""
+        }
+    },
+    "employeetype": {
+        "fields": [
+            {
+                "label": "Code",
+                "name": "Code",
+                "type": "string",
+                "control": "text"
+            },
+            {
+                "label": "Name",
+                "name": "Name",
+                "type": "string",
+                "control": "textarea"
+            },
+            {
+                "label": "Active",
+                "name": "IsActive",
+                "type": "boolean",
+                "control": "checkbox"
+            }
+        ],
+        "resources": {
+            "list": "/ProspectiveAssociate/GetEmpTypes",
+            "create": "",
+            "update": "",
+            "delete": ""
+        }
+    }
+}

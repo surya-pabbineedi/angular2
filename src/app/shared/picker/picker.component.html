@@ -1,0 +1,14 @@
+<div class="pickerContainer">
+	<template #customItemTemplate let-model="item" let-index="index">
+		{{model}}
+	</template>
+
+	<div class="input-group">
+		<input [(ngModel)]="value" [typeaheadOptionField]="'name'" (typeaheadOnSelect)="typeaheadOnSelect($event)"
+			[typeahead]="datasource" type="text" class="form-control" [placeholder]="placeholder">
+		<span class="input-group-btn">
+			<button type="button" (click)="explore()" class="btn btn-primary">...</button>
+		</span>
+	</div>
+
+</div>
