@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { PickerComponent } from './shared/picker/picker.component';
 import { AlertModule } from 'ng2-bootstrap/ng2-bootstrap';
 import { TypeaheadModule } from 'ng2-bootstrap/ng2-bootstrap';
+import { ModalModule } from 'ng2-bootstrap/ng2-bootstrap';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { TypeaheadModule } from 'ng2-bootstrap/ng2-bootstrap';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule, AlertModule, TypeaheadModule
+    HttpModule, AlertModule, TypeaheadModule, ModalModule
   ],
   providers: [],
   bootstrap: [AppComponent]

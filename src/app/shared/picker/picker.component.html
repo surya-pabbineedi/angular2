@@ -1,14 +1,35 @@
 <div class="pickerContainer">
+
+	<!--<ng-content></ng-content>-->
 	<template #customItemTemplate let-model="item" let-index="index">
-		{{model}}
+		<ng-content></ng-content>
 	</template>
 
 	<div class="input-group">
-		<input [(ngModel)]="value" [typeaheadOptionField]="'name'" (typeaheadOnSelect)="typeaheadOnSelect($event)"
-			[typeahead]="datasource" type="text" class="form-control" [placeholder]="placeholder">
+		<!--[typeaheadItemTemplate]="customItemTemplate" -->
+		<input [(ngModel)]="value" [typeaheadOptionField]="'name'" (typeaheadOnSelect)="typeaheadOnSelect($event)" [typeahead]="datasource"
+			type="text" class="form-control" [placeholder]="placeholder">
 		<span class="input-group-btn">
 			<button type="button" (click)="explore()" class="btn btn-primary">...</button>
 		</span>
 	</div>
 
+</div>
+
+<div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				Header!
+			</div>
+			<div class="modal-body">
+				<table class="table table-bordered table-condensed table-responsive table-hover">
+					<tr *ngFor="let row of datasource" (click)="onRowClick(row)">
+						<td>{{row.name}}</td>
+						<td>{{row.address?.street}}</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
 </div>
